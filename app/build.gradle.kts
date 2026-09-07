@@ -20,13 +20,17 @@ android {
     }
 
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.15"
-    }
-
-    kotlinOptions {
-        jvmTarget = "17"
-    }
+    kotlinCompilerExtensionVersion = "1.5.15"
 }
+
+compileOptions {
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+}
+
+kotlinOptions {
+    jvmTarget = "17"
+}}
 
 dependencies {
     implementation(platform("androidx.compose:compose-bom:2024.09.02"))
